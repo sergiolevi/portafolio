@@ -18,8 +18,22 @@
 *****************************************/
 :root {
   /* Colores */
-  --primario: #ffffff;
-  --secundario: #000000;
+  --primario-1: #222a68;
+  --primario-2: #323e9a;
+  --primario-3: #747fd2;
+  --primario-4: #f5f5f5;
+  --secundario-1: #e8871e;
+  --secundario-2: #eea659;
+  --secundario-3: #f3c390;
+  --secundario-4: #fbebda;
+  --brand-uno-1: #401f3e;
+  --brand-uno-2: #7c3c78;
+  --brand-uno-3: #af5aaa;
+  --brand-uno-4: #d19fcd;
+  --brand-dos-1: #ef7b45;
+  --brand-dos-2: #f29469;
+  --brand-dos-3: #f5af8e;
+  --brand-dos-4: #f8cab4;
   /* Tipografía */
   --font-family-body: serif;
   --font-family-headings: sans-serif;
