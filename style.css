@@ -12,31 +12,179 @@
   font-style: normal;
   font-weight: 400;
 }
+/****************************************
+*    Variables
+*****************************************/
+/* Resets */
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+blockquote,
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+hr,
+li,
+ol,
+pre,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+button,
+input,
+textarea {
+  border: 1px solid gray;
+}
+button {
+  border-radius: 0;
+  padding: 0.75em 1em;
+  background-color: transparent;
+}
+button * {
+  pointer-events: none;
+}
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+[hidden] {
+  display: none;
+}
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+/****************************************
+*    Base
+*****************************************/
+html {
+  height: 100%;
+}
+body {
+  font-family: "Gotham";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "shesho";
+}
+/****************************************
+*    Componentes
+*****************************************/ /* Tipografía */
+/*
+@font-face {
+  font-family: 'my-font';
+  src: url('myfont.woff2')
+    format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}*/
 
 /****************************************
 *    Variables
 *****************************************/
-:root {
-  /* Colores */
-  --primario-1: #222a68;
-  --primario-2: #323e9a;
-  --primario-3: #747fd2;
-  --primario-4: #f5f5f5;
-  --secundario-1: #e8871e;
-  --secundario-2: #eea659;
-  --secundario-3: #f3c390;
-  --secundario-4: #fbebda;
-  --brand-uno-1: #401f3e;
-  --brand-uno-2: #7c3c78;
-  --brand-uno-3: #af5aaa;
-  --brand-uno-4: #d19fcd;
-  --brand-dos-1: #ef7b45;
-  --brand-dos-2: #f29469;
-  --brand-dos-3: #f5af8e;
-  --brand-dos-4: #f8cab4;
-  /* Tipografía */
-  --font-family-body: serif;
-  --font-family-headings: sans-serif;
+/* Resets */
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+blockquote,
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+hr,
+li,
+ol,
+pre,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+button,
+input,
+textarea {
+  border: 1px solid gray;
+}
+button {
+  border-radius: 0;
+  padding: 0.75em 1em;
+  background-color: transparent;
+}
+button * {
+  pointer-events: none;
+}
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+[hidden] {
+  display: none;
+}
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 /****************************************
@@ -46,50 +194,9 @@ html {
   height: 100%;
 }
 
-body {
-  font-family: var(--font-family-body);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: var(--font-family-headings);
-}
-
 h1 {
-  font-size: 40px;
+  font-family: "shesho";
 }
-
-h2 {
-  font-size: 33px;
-}
-
-h3 {
-  font-size: 27px;
-}
-
-h4 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 19px;
-}
-
-/****************************************
-*    Temp
-*****************************************/
-/* TODO: Ejercicio aplicar estilos de figma a cajas */
-
 /****************************************
 *    Componentes
 *****************************************/
-
-/****************************************
-*    Helpers
-*****************************************/
-[dots] {
-  outline: rgba(255, 0, 0, 0.75) dotted 2px;
-}
