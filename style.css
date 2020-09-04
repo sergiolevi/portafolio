@@ -104,10 +104,17 @@ h5 {
 *****************************************/
 .home {
   background: #222a68;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home > * {
+  flex: 1;
 }
 
 .header {
-  position: relative;
   display: flex;
   flex-direction: column-reverse;
   background: burlywood;
@@ -125,7 +132,7 @@ h5 {
 }
 
 .header__nombre::before {
-  content: "hola";
+  content: "¿okey? - ";
 }
 
 .header__descripcion {
@@ -138,13 +145,17 @@ h5 {
 .nav {
   background: #f3c390;
 }
-
+.nav a {
+  text-decoration: none;
+}
 .menu {
-  background: #af5aaa;
+  display: grid;
+
+  border: 1px solid black;
 }
 
 .menu__item {
-  border: 1px solid white;
+  flex: 1;
 }
 
 .menu li:nth-child(1) {
