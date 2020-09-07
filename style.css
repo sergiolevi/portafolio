@@ -10,9 +10,22 @@
   font-style: normal;
   font-weight: 400;
 }
+@font-face {
+  font-family: "Akzidenz";
+  src: url("./assets/fonts/AkzidenzGrotesk-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham-Book.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
 /****************************************
-  *    Variables
-  *****************************************/
+*    Variables
+*****************************************/
 :root {
   /* Colores */
   --primario-1: #222a68;
@@ -48,15 +61,17 @@
   --dots: var(--primario) dotted 2px;
 }
 /****************************************
-  *    Base
-  *****************************************/
+*    Base
+*****************************************/
 html {
   height: 100%;
 }
+
 body {
   font-family: var(--font-family-body);
   font-size: var(--font-size);
 }
+
 h1,
 h2,
 h3,
@@ -64,30 +79,37 @@ h4,
 h5 {
   font-family: var(--font-family-headings);
 }
+
 h1 {
   font-size: var(--h1);
 }
+
 h2 {
   font-size: var(--h2);
 }
+
 h3 {
   font-size: var(--h3);
 }
+
 h4 {
   font-size: var(--h4);
 }
+
 h5 {
   font-size: var(--h5);
 }
+
 /****************************************
-  *    Componentes
-  *****************************************/
+*    Componentes
+*****************************************/
 .home {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: var(--primario-1);
 }
+
 .header {
   /* Propiedades de flex container */
   display: flex;
@@ -100,6 +122,7 @@ h5 {
   color: var(--primario-4);
   background: var(--secundario-2);
 }
+
 .header > * {
   font-family: var(--font-family-body);
   font-size: 80px;
@@ -107,29 +130,35 @@ h5 {
   line-height: 114px;
   letter-spacing: 0.0001em;
 }
+
 .header__nombre::before {
   content: "¿Okay? - ";
 }
+
 .menu {
   display: flex;
   flex-direction: column;
 }
+
 /*
-  .menu__item {
-    position: relative;
-  }
-  .menu__item::before {
-    position: absolute;
-    content: "";
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    z-index: -1;
-  }
-  */
+.menu__item {
+  position: relative;
+}
+
+.menu__item::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  z-index: -1;
+}
+*/
+
 .menu__item > * {
   padding: 1ch;
 }
+
 .menu__item:nth-child(1) {
   background: var(--secundario-4);
 }
@@ -154,83 +183,97 @@ h5 {
 .menu__item:nth-child(8) {
   background: var(--brand-dos-1);
 }
+
 summary {
   cursor: pointer;
   list-style-type: none;
 }
+
 summary::marker,
 summary::-webkit-details-marker {
   display: none;
 }
+
 summary:focus {
   outline: none;
 }
+
 summary:hover {
   opacity: 0.8;
 }
+
 /*
-  .menu__item:nth-child(1)::before {
-    width: 37%;
-    background: var(--secundario-4);
-  }
-  .menu__item:nth-child(2)::before {
-    width: 46%;
-    background: var(--secundario-3);
-  }
-  .menu__item:nth-child(3)::before {
-    width: 55%;
-    background: var(--secundario-2);
-  }
-  .menu__item:nth-child(4)::before {
-    width: 64%;
-    background: var(--secundario-1);
-  }
-  .menu__item:nth-child(5)::before {
-    width: 73%;
-    background: var(--brand-dos-4);
-  }
-  .menu__item:nth-child(6)::before {
-    width: 82%;
-    background: var(--brand-dos-3);
-  }
-  .menu__item:nth-child(7)::before {
-    width: 91%;
-    background: var(--brand-dos-2);
-  }
-  .menu__item:nth-child(8)::before {
-    width: 100%;
-    background: var(--brand-dos-1);
-  }
-  */
+.menu__item:nth-child(1)::before {
+  width: 37%;
+  background: var(--secundario-4);
+}
+.menu__item:nth-child(2)::before {
+  width: 46%;
+  background: var(--secundario-3);
+}
+.menu__item:nth-child(3)::before {
+  width: 55%;
+  background: var(--secundario-2);
+}
+.menu__item:nth-child(4)::before {
+  width: 64%;
+  background: var(--secundario-1);
+}
+.menu__item:nth-child(5)::before {
+  width: 73%;
+  background: var(--brand-dos-4);
+}
+.menu__item:nth-child(6)::before {
+  width: 82%;
+  background: var(--brand-dos-3);
+}
+.menu__item:nth-child(7)::before {
+  width: 91%;
+  background: var(--brand-dos-2);
+}
+.menu__item:nth-child(8)::before {
+  width: 100%;
+  background: var(--brand-dos-1);
+}
+*/
+
 /*
-  .menu__item:nth-child(1) details[open] {
-    background: var(--secundario-4);
-  }
-  .menu__item:nth-child(2) details[open] {
-    background: var(--secundario-3);
-  }
-  .menu__item:nth-child(3) details[open] {
-    background: var(--secundario-2);
-  }
-  .menu__item:nth-child(4) details[open] {
-    background: var(--secundario-1);
-  }
-  .menu__item:nth-child(5) details[open] {
-    background: var(--brand-dos-4);
-  }
-  .menu__item:nth-child(6) details[open] {
-    background: var(--brand-dos-3);
-  }
-  .menu__item:nth-child(7) details[open] {
-    background: var(--brand-dos-2);
-  }
-  .menu__item:nth-child(8) details[open] {
-    background: var(--brand-dos-1);
-  }
-  */
+.menu__item:nth-child(1) details[open] {
+  background: var(--secundario-4);
+}
+
+.menu__item:nth-child(2) details[open] {
+  background: var(--secundario-3);
+}
+
+.menu__item:nth-child(3) details[open] {
+  background: var(--secundario-2);
+}
+
+.menu__item:nth-child(4) details[open] {
+  background: var(--secundario-1);
+}
+
+.menu__item:nth-child(5) details[open] {
+  background: var(--brand-dos-4);
+}
+
+.menu__item:nth-child(6) details[open] {
+  background: var(--brand-dos-3);
+}
+
+.menu__item:nth-child(7) details[open] {
+  background: var(--brand-dos-2);
+}
+
+.menu__item:nth-child(8) details[open] {
+  background: var(--brand-dos-1);
+}
+*/
+
 /****************************************
-  *    Helpers
-  *****************************************/
+*    Helpers
+*****************************************/
 [outline] {
   outline: var(--dots);
 }
