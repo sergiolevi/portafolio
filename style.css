@@ -1,5 +1,3 @@
-/* Tipografía */
-
 @font-face {
   font-family: "Akzidenz";
   src: url("./assets/fonts/AkzidenzGrotesk-Bold.woff2") format("woff2");
@@ -34,31 +32,21 @@
   --brand-dos-2: #f29469;
   --brand-dos-3: #f5af8e;
   --brand-dos-4: #f8cab4;
+  /* Intención de los colores */
   /* Tipografía */
   --font-family-body: "Gotham";
   --font-family-headings: "Akzidenz";
-  /* Intención de los colores */
-  --heading-descripcion-color: var(--secundario-1);
-  --textosColor: var(--primario-1);
-  --headingsColor: var(--primario-1);
-  --backgroundColor: var(--secundario-4);
-  --backgroundColorHeader: var(
-    --primario-1
-  ); /* Estilos: elevacion, transiciones & utils */
-  --boxShadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-  --boxhsadowDisabled: 0 1px 1px rgba(0, 0, 0, 0.1);
-  --transition: all 0.4s ease-in-out;
-  --transition-modes: background 500ms ease-in-out, color 1000ms ease-in-out;
-  --dots: var(--primario) dotted 2px;
-  /* Tipografía */
-  font-size: 112.5%; /* Tipografía default de textos en 18px en lugar de 16px, 100% = 16px & 112.5% = 18px */
+  --font-size: 100%;
   --h1: 40px;
   --h2: 33px;
   --h3: 27px;
   --h4: 24px;
   --h5: 19px;
-  /* Posición */
-  --headerHeight: 11vh;
+  /* Estilos: elevacion, transiciones & utils */
+  --boxShadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  --transition: all 0.4s ease-in-out;
+  --transition-modes: background 500ms ease-in-out, color 1000ms ease-in-out;
+  --dots: var(--primario) dotted 2px;
 }
 /****************************************
 *    Base
@@ -69,6 +57,7 @@ html {
 
 body {
   font-family: var(--font-family-body);
+  font-size: var(--font-size);
 }
 
 h1,
@@ -80,111 +69,191 @@ h5 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: var(--h1);
 }
 
 h2 {
-  font-size: 33px;
+  font-size: var(--h2);
 }
 
 h3 {
-  font-size: 27px;
+  font-size: var(--h3);
 }
 
 h4 {
-  font-size: 24px;
+  font-size: var(--h4);
 }
 
 h5 {
-  font-size: 19px;
+  font-size: var(--h5);
 }
 
 /****************************************
 *    Componentes
 *****************************************/
 .home {
-  background: #222a68;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.home > * {
-  flex: 1;
+  background: var(--primario-1);
 }
 
 .header {
+  /* Propiedades de flex container */
   display: flex;
   flex-direction: column-reverse;
-  background: burlywood;
-  color: #f5f5f5;
-  font-size: 96px;
-  line-height: 114px;
-  letter-spacing: 0.0001em;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* Propiedades de flex item */
+  flex: 1;
+  /* Otras propiedades */
+  color: var(--primario-4);
+  background: var(--secundario-2);
 }
 
-.header__nombre {
-  font-size: 96px;
+.header > * {
+  font-family: var(--font-family-body);
+  font-size: 80px;
+  font-weight: normal;
   line-height: 114px;
   letter-spacing: 0.0001em;
 }
 
 .header__nombre::before {
-  content: "¿okey? - ";
+  content: "¿Okay? - ";
 }
 
-.header__descripcion {
-  font-family: var(--font-family-headings);
-  font-size: 96px;
-  line-height: 114px;
-  letter-spacing: 0.0001em;
-}
-
-.nav {
-  background: #f3c390;
-}
-.nav a {
-  text-decoration: none;
-}
 .menu {
-  display: grid;
-
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
+/*
 .menu__item {
-  flex: 1;
+  position: relative;
+}
+.menu__item::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  z-index: -1;
+}
+*/
+
+.menu__item > * {
+  padding: 1ch;
 }
 
-.menu li:nth-child(1) {
+.menu__item:nth-child(1) {
   background: var(--secundario-4);
 }
-.menu li:nth-child(2) {
+.menu__item:nth-child(2) {
   background: var(--secundario-3);
 }
-.menu li:nth-child(3) {
+.menu__item:nth-child(3) {
   background: var(--secundario-2);
 }
-.menu li:nth-child(4) {
+.menu__item:nth-child(4) {
   background: var(--secundario-1);
 }
-.menu li:nth-child(5) {
+.menu__item:nth-child(5) {
   background: var(--brand-dos-4);
 }
-.menu li:nth-child(6) {
+.menu__item:nth-child(6) {
   background: var(--brand-dos-3);
 }
-.menu li:nth-child(7) {
+.menu__item:nth-child(7) {
   background: var(--brand-dos-2);
 }
-.menu li:nth-child(8) {
+.menu__item:nth-child(8) {
   background: var(--brand-dos-1);
 }
+
+summary {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+summary::marker,
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+summary:hover {
+  opacity: 0.8;
+}
+
+/*
+.menu__item:nth-child(1)::before {
+  width: 37%;
+  background: var(--secundario-4);
+}
+.menu__item:nth-child(2)::before {
+  width: 46%;
+  background: var(--secundario-3);
+}
+.menu__item:nth-child(3)::before {
+  width: 55%;
+  background: var(--secundario-2);
+}
+.menu__item:nth-child(4)::before {
+  width: 64%;
+  background: var(--secundario-1);
+}
+.menu__item:nth-child(5)::before {
+  width: 73%;
+  background: var(--brand-dos-4);
+}
+.menu__item:nth-child(6)::before {
+  width: 82%;
+  background: var(--brand-dos-3);
+}
+.menu__item:nth-child(7)::before {
+  width: 91%;
+  background: var(--brand-dos-2);
+}
+.menu__item:nth-child(8)::before {
+  width: 100%;
+  background: var(--brand-dos-1);
+}
+*/
+
+/*
+.menu__item:nth-child(1) details[open] {
+  background: var(--secundario-4);
+}
+.menu__item:nth-child(2) details[open] {
+  background: var(--secundario-3);
+}
+.menu__item:nth-child(3) details[open] {
+  background: var(--secundario-2);
+}
+.menu__item:nth-child(4) details[open] {
+  background: var(--secundario-1);
+}
+.menu__item:nth-child(5) details[open] {
+  background: var(--brand-dos-4);
+}
+.menu__item:nth-child(6) details[open] {
+  background: var(--brand-dos-3);
+}
+.menu__item:nth-child(7) details[open] {
+  background: var(--brand-dos-2);
+}
+.menu__item:nth-child(8) details[open] {
+  background: var(--brand-dos-1);
+}
+*/
+
 /****************************************
 *    Helpers
 *****************************************/
-[dots] {
-  outline: rgba(255, 0, 0, 0.75) dotted 2px;
+[outline] {
+  outline: var(--dots);
 }

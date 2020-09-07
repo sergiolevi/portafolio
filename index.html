@@ -1,33 +1,100 @@
-<!DOCTYPE html>
-<!-- https://developer.mozilla.org/es/docs/Web/HTML/Atributos_Globales/lang -->
-<html lang="ex-MX">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio - xyz</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="home">
-    <header class="header">
-      <h1 class="header__nombre">Sergio Levi</h1>
-      <p class="header__descripcion">Esto es mi portafolio</p>
-    </header>
-    <nav class="nav">
-      <ul class="menu">
-        <li class="menu__item"><a href="#">Tipografía</a></li>
-        <li class="menu__item"><a href="#">Branding</a></li>
-        <li class="menu__item"><a href="#">Fotografía</a></li>
-        <li class="menu__item"><a href="#">Carteles</a></li>
-        <li class="menu__item"><a href="#">Abstracción</a></li>
-        <li class="menu__item"><a href="#">Animación</a></li>
-        <li class="menu__item"><a href="#">Infografías/Gráficas</a></li>
-        <li class="menu__item"><a href="#">Ilustración</a></li>
-      </ul>
-    </nav>
-  </body>
-</html>
+<body class="home">
+  <header class="header">
+    <h1 class="header__nombre">Sergio Levi</h1>
+    <p class="header__descripcion">Esto es mi portafolio</p>
+  </header>
+  <ul class="menu">
+    <!-- Estructura antes nav>ul>li>a -->
+    <!-- 
+      <li class="menu__item"><a href="#">Tipografía</a></li>
+      <li class="menu__item"><a href="#">Branding</a></li>
+      <li class="menu__item"><a href="#">Fotografía</a></li>
+      <li class="menu__item"><a href="#">Carteles</a></li>
+      <li class="menu__item"><a href="#">Abstracción</a></li>
+      <li class="menu__item"><a href="#">Animación</a></li>
+      <li class="menu__item"><a href="#">Infografías/Gráficas</a></li>
+      <li class="menu__item"><a href="#">Ilustración</a></li>
+   -->
+    <!-- Estructura después nav>ul>li>details>summary+p -->
+    <li class="menu__item">
+      <details>
+        <summary>
+          Tipografía
+        </summary>
+        <p>
+          Tipografía content
+        </p>
+      </details>
+    </li>
+    <li class="menu__item">
+      <details>
+        <summary>
+          Branding
+        </summary>
+        <p>
+          Branding content
+        </p>
+      </details>
+    </li>
+    <li class="menu__item">
+      <details>
+        <summary>
+          Fotografía
+        </summary>
+        <p>
+          Fotografía content
+        </p>
+      </details>
+    </li>
+    <li class="menu__item">
+      <details>
+        <summary>
+          Carteles
+        </summary>
+        <p>
+          Carteles content
+        </p>
+      </details>
+    </li>
+    <li class="menu__item">
+      <details>
+        <summary>
+          Abstracción
+        </summary>
+        <p>
+          Abstracción content
+        </p>
+      </details>
+    </li>
+    <li class="menu__item">
+      <details>
+        <summary>
+          Animación
+        </summary>
+        <p>
+          Animación content
+        </p>
+      </details>
+    </li>
+    <li class="menu__item">
+      <details>
+        <summary>
+          Infografías/Gráficas
+        </summary>
+        <p>
+          Infografías/Gráficas content
+        </p>
+      </details>
+    </li>
+    <li class="menu__item">
+      <details>
+        <summary>
+          Ilustración
+        </summary>
+        <p>
+          Ilustración content
+        </p>
+      </details>
+    </li>
+  </ul>
+</body>
