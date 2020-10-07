@@ -104,10 +104,13 @@ h5 {
 *    Componentes
 *****************************************/
 .home {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url("fondo correcto.jpg");
+  background: url("./assets/imagenes/correcto.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
 }
 
 .header {
@@ -120,7 +123,7 @@ h5 {
   flex: 1;
   /* Otras propiedades */
   color: var(--primario-4);
-  background: var(--secundario-2);
+  /* background: var(--secundario-2); */
 }
 
 .header > * {
@@ -274,6 +277,15 @@ summary:hover {
 /* Empieza aqui */
 .main {
   background: #222a68;
+}
+
+.main__social {
+  display: flex;
+  text-align: center;
+}
+
+.main__social > * {
+  flex: 1;
 }
 
 /****************************************
