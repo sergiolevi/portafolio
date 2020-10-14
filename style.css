@@ -279,6 +279,18 @@ summary:hover {
   background: #222a68;
 }
 
+.main__descripcion {
+  padding: 2rem;
+}
+
+.main__descripcion h2 {
+  padding: 2rem;
+}
+
+.main__descripcion p {
+  padding: 1rem;
+}
+
 .main__social {
   display: flex;
   text-align: center;
@@ -286,6 +298,40 @@ summary:hover {
 
 .main__social > * {
   flex: 1;
+}
+
+.main__social-link {
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 60px 300px;
+  place-content: center;
+}
+
+.main__social-link svg {
+  grid-row: 1 / 3;
+}
+.main__social-link svg:nth-child(1) {
+  /* Instagram */
+  width: 34px;
+  height: 53px;
+}
+.main__social-link svg:nth-child(2) {
+  /* Telefono */
+  width: 49px;
+  height: 51px;
+}
+.main__social-link svg:nth-child(3) {
+  /* Mail */
+  width: 49px;
+  height: 51px;
+}
+
+.main__social-link p {
+  grid-row: 1 / 2;
+}
+.main__social-link a {
+  grid-row: 2 / 3;
 }
 
 /****************************************
