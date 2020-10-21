@@ -304,7 +304,7 @@ summary:hover {
   padding: 2rem;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 60px 300px;
+  grid-template-columns: 60px auto;
   place-content: center;
 }
 
@@ -315,6 +315,7 @@ summary:hover {
   /* Instagram */
   width: 34px;
   height: 53px;
+  align-self: start;
 }
 .main__social-link svg:nth-child(2) {
   /* Telefono */
@@ -332,6 +333,7 @@ summary:hover {
 }
 .main__social-link a {
   grid-row: 2 / 3;
+  border: 1px solid white;
 }
 
 /****************************************
