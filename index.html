@@ -8,28 +8,17 @@
     <title>Portafolio - Shesho</title>
     <link
       rel="stylesheet"
-      href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2322424/minireset.css"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body class="home">
     <header class="header">
       <h1 class="header__nombre">Sergio Levi</h1>
       <p class="header__descripcion">Esto es mi portafolio</p>
     </header>
     <ul class="categoria">
-      <!-- Estructura antes nav>ul>li>a -->
-      <!-- 
-        <li class="categoria__item"><a href="#">Tipografía</a></li>
-        <li class="categoria__item"><a href="#">Branding</a></li>
-        <li class="categoria__item"><a href="#">Fotografía</a></li>
-        <li class="categoria__item"><a href="#">Carteles</a></li>
-        <li class="categoria__item"><a href="#">Abstracción</a></li>
-        <li class="categoria__item"><a href="#">Animación</a></li>
-        <li class="categoria__item"><a href="#">Infografías/Gráficas</a></li>
-        <li class="categoria__item"><a href="#">Ilustración</a></li>
-     -->
-      <!-- Estructura después nav>ul>li>details>summary+p -->
       <li class="categoria__item">
         <details>
           <summary>
@@ -129,7 +118,7 @@
       </li>
     </ul>
     <main class="main">
-      <div class="main__descripcion">
+      <div class="main__description">
         <h2>¿QUIEN SE SUPONE QUE SOY?</h2>
         <p>
           Pues me dicen Shesho, pero me llamo Sergio Levi Istroti, estudio
@@ -138,208 +127,28 @@
           estilo de trabajo que manejo. podrán ver un poco del proceso de
           cración de estos proyectos y el resultado final.
           <br />
+          <br />
           Así que espero les guste y disfruten.
         </p>
-        <div class="main__social">
-          <div class="main__social-link">
-            <svg
-              width="34"
-              height="53"
-              viewBox="0 0 34 53"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0)">
-                <path
-                  d="M16.9961 24.5992C19.1953 24.5992 20.9781 22.7739 20.9781 20.5222C20.9781 18.2706 19.1953 16.4453 16.9961 16.4453C14.797 16.4453 13.0142 18.2706 13.0142 20.5222C13.0142 22.7739 14.797 24.5992 16.9961 24.5992Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M20.4403 27.7812C19.5961 28.745 18.3709 29.3569 17.0037 29.3569C15.6366 29.3569 14.4113 28.745 13.5671 27.7812C10.5638 28.1255 8.23291 30.7261 8.23291 33.8928V35.2773C8.23291 36.83 9.45813 38.0845 10.9747 38.0845H23.0327C24.5493 38.0845 25.7746 36.83 25.7746 35.2773V33.8928C25.7671 30.7261 23.4362 28.1255 20.4403 27.7812Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M27.8589 51.8528H6.14104C3.36934 51.8528 1.12061 49.5504 1.12061 46.7126V6.2876C1.12061 3.44981 3.36934 1.14746 6.14104 1.14746H27.8664C30.6381 1.14746 32.8868 3.44981 32.8868 6.2876V46.7126C32.8793 49.5504 30.6306 51.8528 27.8589 51.8528Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M22.9954 6.2417H11.0047L9.5105 1.14746H24.4896L22.9954 6.2417Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12.9172 47.1792H21.0829"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="34" height="53" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <p>Insta:</p>
-            <a href="https://www.instagram.com/sheshin_pinguin/" target="_blank"
-              >@sheshin_pinguin</a
-            >
-          </div>
-          <div class="main__social-link">
-            <svg
-              width="49"
-              height="51"
-              viewBox="0 0 49 51"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0)">
-                <path
-                  d="M24.5038 1.12402C11.5975 1.12402 1.14148 11.4184 1.14148 24.1253C1.14148 31.6851 4.84749 38.3907 10.5701 42.5863C8.69809 45.9129 5.98136 49.1945 2.37428 49.8838C2.37428 49.8838 11.2778 49.5916 19.078 46.4973C20.8206 46.9019 22.6318 47.1267 24.5038 47.1267C37.4025 47.1267 47.8661 36.8323 47.8661 24.1253C47.8585 11.4184 37.4025 1.12402 24.5038 1.12402Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M29.7318 31.1081L18.804 20.3567L21.536 17.667C22.5937 16.6255 22.5937 14.9398 21.536 13.9058L20.0216 12.4149C18.9638 11.3734 17.2516 11.3734 16.2014 12.4149L12.2215 16.3333C9.80915 18.7084 9.80915 22.5669 12.2215 24.942L25.0746 37.5964C27.4869 39.9715 31.406 39.9715 33.8183 37.5964L37.7983 33.678C38.8561 32.6365 38.8561 30.9508 37.7983 29.9168L36.2839 28.4259C35.2261 27.3845 33.5139 27.3845 32.4638 28.4259L29.7318 31.1081Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="49" height="51" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-
-            <p>tel:</p>
-            <a href="(55) 3895 8751">(55) 3895 8751</a>
-
-            <!-- <a href="mailto:name@email.com">Link text</a> -->
-          </div>
-          <div class="main__social-link">
-            <svg
-              width="65"
-              height="49"
-              viewBox="0 0 65 49"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0)">
-                <path
-                  d="M62.3512 1.04199H47.6364C46.7512 1.04199 46.0332 1.75757 46.0332 2.63989V11.9494C46.0332 12.8317 46.7512 13.5473 47.6364 13.5473H49.0933V17.7922L52.7946 13.5473H62.3512C63.2364 13.5473 63.9544 12.8317 63.9544 11.9494V2.63989C63.9544 1.75757 63.2364 1.04199 62.3512 1.04199Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M51.0381 5.43262H58.9496"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M51.0381 9.00391H58.9496"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M2.64875 7.98242H17.3635C18.2487 7.98242 18.9667 8.698 18.9667 9.58032V18.8829C18.9667 19.7652 18.2487 20.4808 17.3635 20.4808H15.9067V24.7257L12.2053 20.4808H2.64875C1.76349 20.4808 1.04553 19.7652 1.04553 18.8829V9.58032C1.04553 8.698 1.76349 7.98242 2.64875 7.98242Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M13.9689 12.373H6.05042"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M13.9689 15.9443H6.05042"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M56.245 13.5474V31.6801C56.245 34.1811 54.2097 36.2098 51.7003 36.2098H14.5475C12.0381 36.2098 10.0027 34.1811 10.0027 31.6801V20.4878"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M10.0096 8.059C10.0096 5.55794 12.045 3.5293 14.5544 3.5293H46.0332"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M38.1566 42.9623H28.0981L26.6134 36.2095H39.6413L38.1566 42.9623Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M44.3255 47.958H21.9222V46.2836C21.9222 44.4565 23.407 42.9697 25.2472 42.9697H41.0075C42.8407 42.9697 44.3324 44.4495 44.3324 46.2836V47.958H44.3255Z"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M56.245 29.3247H10.0096"
-                  stroke="white"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="65" height="49" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-
-            <p>Mail:</p>
-            <a href="mailto:sergiolevi2398@gmail.com"
-              >sergiolevi2398@gmail.com</a
-            >
-          </div>
+      </div>
+      <div class="main__social">
+        <div class="main__social-item">
+          <!-- incluimos las imágenes con una etiqueta de img e importamos el svg desde el atributo src -->
+          <img src="./assets/imagenes/insta.svg" alt="Instagram" />
+          <p>Insta:</p>
+          <a href="https://www.instagram.com/sheshin_pinguin/" target="_blank"
+            >@sheshin_pinguin</a
+          >
+        </div>
+        <div class="main__social-item">
+          <img src="./assets/imagenes/cel.svg" alt="Telefono" />
+          <p>tel:</p>
+          <a href="tel:+5538958751">(55)38958751</a>
+        </div>
+        <div class="main__social-item">
+          <img src="./assets/imagenes/mail.svg" alt="Mail" />
+          <p>Mail:</p>
+          <a href="mailto:sergiolevi2398@gmail.com">sergiolevi2398@gmail.com</a>
         </div>
       </div>
     </main>
