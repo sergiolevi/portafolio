@@ -4,18 +4,14 @@
   font-style: normal;
   font-weight: 600;
 }
+
 @font-face {
-  font-family: "Gotham";
-  src: url("./assets/fonts/Gotham-Book.woff2") format("woff2");
+  font-family: "Akzidenz-regular";
+  src: url("./assets/fonts/AkzidenzGrotesk-Regular.woff2") format("woff2");
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
 }
-@font-face {
-  font-family: "Akzidenz";
-  src: url("./assets/fonts/AkzidenzGrotesk-Bold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 600;
-}
+
 @font-face {
   font-family: "Gotham";
   src: url("./assets/fonts/Gotham-Book.woff2") format("woff2");
@@ -48,6 +44,7 @@
   /* Tipografía */
   --font-family-body: "Gotham";
   --font-family-headings: "Akzidenz";
+  --font-family-regular: "Akzidenz-regular";
   --font-size: 100%;
   --h1: 40px;
   --h2: 33px;
@@ -269,4 +266,25 @@ summary:hover {
   grid-row: 2 / 3;
   align-self: start; /* lo opuesto al párrafo para ponerlo más cerca del párrafo en su eje vertical */
   /* TODO: formato del enlace */
+}
+
+/* Contenido categoria */
+.categoria-contenido {
+  background: #747fd2;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.categoria-card {
+}
+.categoria-titulo {
+  font-family: var(--font-family-regular);
+  text-align: center;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 32px;
+  color: #222a68;
+}
+.categoria-imagen {
+  background: #8b137b;
 }
