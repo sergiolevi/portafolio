@@ -173,6 +173,9 @@ summary {
   cursor: pointer;
   list-style-type: none;
 }
+summary h2 {
+  color: var(--primario-1);
+}
 
 summary::marker,
 summary::-webkit-details-marker {
@@ -217,6 +220,7 @@ summary:hover {
 
 .main__social {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   max-width: 85vw;
   margin-top: auto;
@@ -225,10 +229,21 @@ summary:hover {
   margin-left: auto;
 }
 
-/* https://css-tricks.com/snippets/css/a-guide-to-flexbox */
 .main__social > * {
-  flex: 1;
+  flex-grow: 1;
+  flex-basis: calc((333px - 100%) * 999);
 }
+
+@media screen and (min-width: 40em) {
+  .main__social {
+    flex-direction: row;
+  }
+}
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox */
+/* .main__social > * {
+  flex: 1;
+} */
 
 /* https://css-tricks.com/snippets/css/complete-guide-grid */
 .main__social-item {
