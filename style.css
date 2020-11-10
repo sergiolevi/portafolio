@@ -218,69 +218,57 @@ summary:hover {
   margin-bottom: 2rem;
 }
 
+/* Main social */
 .main__social {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 85vw;
-  margin-top: auto;
-  margin-right: auto;
-  margin-bottom: 4rem;
-  margin-left: auto;
+  gap: 2rem;
+  width: 85vw;
+  margin: 0 auto 4rem;
 }
 
-.main__social > * {
-  flex-grow: 1;
-  flex-basis: calc((333px - 100%) * 999);
+.main__social-item {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
 }
 
-@media screen and (min-width: 40em) {
+.main__social-item:nth-child(1) {
+  gap: 3rem;
+}
+
+.main__social-item:nth-child(1) img {
+  transform: translateX(0.7rem);
+}
+
+.main__social-item:nth-child(2) {
+  gap: 2rem;
+}
+
+.main__social-item:nth-child(2) img {
+  transform: translateX(0.3rem);
+}
+
+@media screen and (min-width: 50em) {
   .main__social {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: unset;
   }
-}
 
-/* https://css-tricks.com/snippets/css/a-guide-to-flexbox */
-/* .main__social > * {
-  flex: 1;
-} */
+  .main__social-item:nth-child(1),
+  .main__social-item:nth-child(2),
+  .main__social-item:nth-child(3) {
+    gap: 1rem;
+  }
 
-/* https://css-tricks.com/snippets/css/complete-guide-grid */
-.main__social-item {
-  display: grid;
-  grid-template-rows: repeat(
-    2,
-    auto
-  ); /* 2 filas: auto = lo que mida el elemento */
-  grid-template-columns: auto max-content; /* 2 columnas: la primera auto y la segunda max-content que equivale al máximo valor que mida el elemento */
-  grid-column-gap: 20px; /* espacio de 20px entre cada columna */
-  justify-content: center; /* centrar todo en su eje horizontal */
-  border: 2px solid white;
-}
-
-.main__social-item img {
-  grid-row: 1 / 3;
-  align-self: center; /* centrar elemento en su eje vertical */
-
-  /* min-width: 60px; */
-}
-
-.main__social-item img {
-  grid-row: 1 / 3;
-  align-self: center; /* centrar elemento en su eje vertical */
-  min-width: 25px;
-}
-
-.main__social-item p {
-  grid-row: 1 / 2;
-  align-self: end; /* poner elemento alineado con el de abajo, al ponerlo en su eje vertical hasta abajo */
-  /* TODO: formato del texto (Insta, tel, Mail) */
-}
-
-.main__social-item a {
-  grid-row: 2 / 3;
-  align-self: start; /* lo opuesto al párrafo para ponerlo más cerca del párrafo en su eje vertical */
-  /* TODO: formato del enlace */
+  /* Esto resetea el transform aplicado en movil de instagram & telefono  */
+  .main__social-item:nth-child(1) img,
+  .main__social-item:nth-child(2) img {
+    transform: none;
+  }
 }
 
 /* Contenido categoria */
