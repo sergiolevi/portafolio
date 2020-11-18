@@ -43,7 +43,7 @@
   /* Intención de los colores */
   /* Tipografía */
   --font-family-body: "Gotham";
-  --font-family-headings: "Akzidenz";
+  --font-family-bold: "Akzidenz";
   --font-family-regular: "Akzidenz-regular";
   --font-size: 100%;
   --h1: 40px;
@@ -74,7 +74,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--font-family-headings);
+  font-family: var(--font-family-bold);
 }
 
 h1 {
@@ -101,10 +101,9 @@ h5 {
 *    Componentes
 *****************************************/
 .home {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: space-between; */
   background: url("./assets/imagenes/correcto.jpg") no-repeat center center
     fixed;
   background-size: cover;
@@ -114,25 +113,31 @@ h5 {
   /* Propiedades de flex container */
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  text-align: center;
   /* Propiedades de flex item */
   flex: 1;
   /* Otras propiedades */
   color: var(--primario-4);
   /* background: var(--secundario-2); */
+  height: 100vh;
 }
 
 .header > * {
-  font-family: var(--font-family-body);
-  font-size: 80px;
+  font-family: var(--font-family-regular);
+  font-size: 60px;
   font-weight: normal;
-  line-height: 114px;
-  letter-spacing: 0.0001em;
+  line-height: 90px;
+  /* letter-spacing: 0.0001em; */
 }
 
-.header__nombre::before {
-  content: "¿Okay? - ";
+@media screen and (min-width: 40em) {
+  .header > * {
+    font-size: 110px;
+    line-height: 114px;
+    letter-spacing: 0.0001em;
+  }
 }
 
 .categoria {
