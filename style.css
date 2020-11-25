@@ -197,6 +197,7 @@ summary:hover {
 
 /* Main */
 .main {
+  padding: 1rem 0;
   background: #222a68;
   color: white;
 }
@@ -212,7 +213,7 @@ summary:hover {
 }
 
 .main__description {
-  max-width: 85vw; /* Máximo de 85% del viewport & margin-left + margin-right = auto centrar el contenido  */
+  max-width: 65vw; /* Máximo de 85% del viewport & margin-left + margin-right = auto centrar el contenido  */
   margin-top: 2rem;
   margin-right: auto;
   margin-bottom: 4rem;
