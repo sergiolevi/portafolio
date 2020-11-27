@@ -297,3 +297,22 @@ summary:hover {
 .categoria-imagen {
   background: #8b137b;
 }
+
+/* Proyecto */
+.proyecto {
+  max-width: 65vw;
+  margin: auto;
+}
+
+.proyecto > * {
+  margin-top: 2rem;
+}
+
+.proyecto h2 {
+}
+
+.proyecto p {
+}
+
+.proyecto img {
+}
