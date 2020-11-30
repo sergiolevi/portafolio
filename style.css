@@ -279,7 +279,7 @@ summary:hover {
 
 /* Contenido categoria */
 .categoria-contenido {
-  background: #747fd2;
+  background: none;
   display: flex;
   justify-content: center;
   gap: 60px;
