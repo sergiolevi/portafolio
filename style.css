@@ -300,6 +300,7 @@ summary:hover {
 
 /* Proyecto */
 .proyecto {
+  position: relative;
   max-width: 65vw;
   margin: auto;
 }
@@ -315,4 +316,11 @@ summary:hover {
 }
 
 .proyecto img {
+}
+.back {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: -150px;
 }
