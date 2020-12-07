@@ -280,10 +280,18 @@ summary:hover {
 /* Contenido categoria */
 .categoria-contenido {
   background: none;
-  display: flex;
+  display: grid;
   justify-content: center;
-  gap: 60px;
+  gap: 30px;
 }
+
+@media screen and (min-width: 40em) {
+  .categoria-contenido {
+    display: flex;
+    gap: 60px;
+  }
+}
+
 .categoria-card {
 }
 .categoria-titulo {
@@ -324,3 +332,103 @@ summary:hover {
   top: 0;
   left: -150px;
 }
+
+/* Video */
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 2rem auto;
+}
+
+/* Temp */
+
+/* .categoria__item {
+  position: relative;
+}
+
+.categoria__item::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  z-index: -1;
+}
+
+.categoria__item > * {
+  padding: 1ch;
+} */
+
+/* con pseudoelementos */
+/* .categoria__item:nth-child(1)::before {
+  width: 37%;
+  background: var(--uno);
+}
+.categoria__item:nth-child(2)::before {
+  width: 46%;
+  background: var(--dos);
+}
+.categoria__item:nth-child(3)::before {
+  width: 55%;
+  background: var(--tres);
+}
+.categoria__item:nth-child(4)::before {
+  width: 64%;
+  background: var(--cuatro);
+}
+.categoria__item:nth-child(5)::before {
+  width: 73%;
+  background: var(--uno);
+}
+.categoria__item:nth-child(6)::before {
+  width: 82%;
+  background: var(--dos);
+}
+.categoria__item:nth-child(7)::before {
+  width: 91%;
+  background: var(--tres);
+}
+.categoria__item:nth-child(8)::before {
+  width: 100%;
+  background: var(--cuatro);
+}
+
+.categoria__item:nth-child(1) details[open] {
+  background: var(--uno);
+}
+
+.categoria__item:nth-child(2) details[open] {
+  background: var(--dos);
+}
+
+.categoria__item:nth-child(3) details[open] {
+  background: var(--tres);
+}
+
+.categoria__item:nth-child(4) details[open] {
+  background: var(--cuatro);
+}
+
+.categoria__item:nth-child(5) details[open] {
+  background: var(--uno);
+}
+
+.categoria__item:nth-child(6) details[open] {
+  background: var(--dos);
+}
+
+.categoria__item:nth-child(7) details[open] {
+  background: var(--tres);
+}
+
+.menu__item:nth-child(8) details[open] {
+  background: var(--cuatro);
+} */
